@@ -33,7 +33,6 @@
     'depends': ['stock', 'product'],
     'data': [
         'views/product_label.xml',
-        #'views/crm_views.xml',
     ],
     'images': ['static/description/banner.jpg'],
     'license': 'AGPL-3',
