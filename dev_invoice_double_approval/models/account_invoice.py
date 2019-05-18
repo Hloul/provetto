@@ -56,7 +56,7 @@ class AccountInvoice(models.Model):
         for invoice in self:
             if invoice.state not in ['draft']:
                 continue
-            if invoice.type == 'out_invoice':
+            if invoice.type == 'out_invoice' or invoice.type == 'out_refund':
                 ir_param = invoice.env['ir.config_parameter'].sudo()
                 is_double_enabled = \
                     bool(ir_param.get_param(
@@ -122,7 +122,7 @@ class AccountInvoice(models.Model):
                         invoice.write({'state': 'to approve'})
                 else:
                     return super(AccountInvoice, self).action_invoice_open()
-            if invoice.type == 'in_invoice':
+            if invoice.type == 'in_invoice' or invoice.type == 'in_refund':
                 ir_param = invoice.env['ir.config_parameter'].sudo()
                 is_double_enabled = bool(ir_param.get_param(
                     'dev_invoice_double_approval.double_verify'))
