@@ -2,9 +2,9 @@
 
 {
     'name': 'Activity on Payment',
-    'version': '1.0',
+    'version': '12.0.1.0',
     'category': 'Accounting',
-    'sequence': 6,
+    'sequence': 1,
     'author': 'HLOUL-BAS',
     'summary': 'Add activity scheduling to payments',
     'description': """
@@ -14,10 +14,11 @@ Add the functionality of schedule an activity to payments model
 
 """,
     'depends': ['mail','account'],
-    'data': [
-        'views/views.xml',
-    ],
+    'data': ['views/views.xml'],
     'installable': True,
+    'application': False,
     'website': 'www.hloul-bas.com',
     'auto_install': False,
 }
+
+# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
