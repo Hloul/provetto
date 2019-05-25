@@ -12,7 +12,8 @@ from odoo import models, fields
 
 
 class AccountPayment(models.Model):
-    _inherit = mail.activity.mixin'
+    _inherit = 'mail.activity.mixin'
+
 
 
 
