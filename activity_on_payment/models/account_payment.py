@@ -12,7 +12,7 @@ from odoo import models, fields, api, _
 from odoo.exceptions import UserError, ValidationError
 
 
-class AccountPayment(models.Model):
+class accountpayment(models.Model):
 	_inherit = ['account.payment','mail.activity.mixin']
 	activity_ids = fields.One2many('mail.activity', string='Activities')
 
