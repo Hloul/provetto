@@ -14,7 +14,7 @@ Add the functionality of schedule an activity to payments model
 
 """,
     'depends': ['mail','account'],
-    'data': [],
+    'data': ['views/views.xml'],
     'installable': True,
     'application': False,
     'website': 'www.hloul-bas.com',
